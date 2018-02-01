@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './../App.css';
 import Notes from './Notes';
 import { Button } from 'reactstrap';
+import PropTypes from 'prop-types';
 
 class Board extends Component
 {
@@ -83,5 +84,13 @@ class Board extends Component
     }
 
 }
+
+Board.propTypes = {
+    nextId: PropTypes.func,
+    add: PropTypes.func,
+    update: PropTypes.func,
+    remove: PropTypes.func,
+    eachNote: PropTypes.func
+};
 
 export default Board

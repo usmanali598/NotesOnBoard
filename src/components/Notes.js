@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import Board from './Board';
 import Draggable from 'react-draggable'
 import { Button } from 'reactstrap';
+import PropTypes from 'prop-types';
 
 class Notes extends Component
 {
@@ -88,5 +88,13 @@ class Notes extends Component
     }
 
 }
+
+Notes.propTypes = {
+    randomBetween: PropTypes.func,
+    edit: PropTypes.func,
+    save: PropTypes.func,
+    renderForm: PropTypes.func,
+    renderDisplay: PropTypes.func
+};
 
 export default Notes
