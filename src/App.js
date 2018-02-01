@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import speaker from './speaker.PNG';
 import './App.css';
+import { Button } from 'reactstrap';
+import Board from './components/Board';
+import Notes from './components/Notes';
 
 class App extends Component
 {
@@ -9,13 +12,10 @@ class App extends Component
   {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={ speaker } className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+
+        <img src={ speaker } className="App-logo" alt="logo" />
+        <Board />
+        <Notes />
       </div>
     );
   }
