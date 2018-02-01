@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Board from './Board';
 import Draggable from 'react-draggable'
+import { Button } from 'reactstrap';
 
 class Notes extends Component
 {
@@ -58,7 +59,7 @@ class Notes extends Component
                 <textarea ref="newText"
                     defaultValue={ this.props.children }>
                 </textarea>
-                <button onClick={ this.save }>SAVE</button>
+                <Button outline color="success" size="sm" onClick={ this.save }>SAVE</Button>{ ' ' }
             </div>
         )
     }
@@ -69,8 +70,9 @@ class Notes extends Component
                 style={ this.style }>
                 <p>{ this.props.children }</p>
                 <span>
-                    <button onClick={ this.edit }>EDIT</button>
-                    <button onClick={ this.remove }>X</button>
+
+                    <Button outline color="primary" size="sm" onClick={ this.edit }>EDIT</Button>{ ' ' }
+                    <Button outline color="danger" size="sm" onClick={ this.remove }>X</Button>{ ' ' }
                 </span>
             </div>
         )

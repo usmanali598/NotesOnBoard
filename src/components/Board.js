@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './../App.css';
 import Notes from './Notes';
+import { Button } from 'reactstrap';
 
 class Board extends Component
 {
@@ -77,7 +78,7 @@ class Board extends Component
     {
         return ( <div className='board'>
             { this.state.notes.map( this.eachNote ) }
-            <button onClick={ () => this.add( 'New Note' ) }>+</button>
+            <Button outline color="primary" size="lg" onClick={ () => this.add( 'New Note' ) }>+</Button>{ ' ' }
         </div> )
     }
 
